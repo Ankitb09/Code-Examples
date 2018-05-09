@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stop Watch</title>
+</head>
+
+<body>
+    <div id="heya">heyaaaaaaaaa</div>
+    <div id="hello">hello hello ello</div>
+    <div id="salutations">salutations salutationssalutations</div>
+    <script>
+        function showGreeting(help) {
+            console.log(help);
+        }
+        function setupGreetings() {
+            var greetings = [
+                { 'text': 'Heya!', id: "heya" },
+                { 'text': 'Hello', id: "hello" },
+                { 'text': 'Salutations', id: "salutations" }
+            ];
+            for (var i = 0; i < greetings.length; i++) {
+                let greeting = greetings[i];
+                document.getElementById(greeting.id).onclick = function () {
+                    showGreeting(greeting.text);
+                }
+            }
+        }
+        setupGreetings();
+    </script>
+</body>
+
+</html>
