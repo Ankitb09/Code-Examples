@@ -6,9 +6,7 @@ function geo_success(position) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET',url);
     xhr.onload = function(success){
-        console.log(success);
-        console.log(xhr)
-        console.log(xhr.response)
+        console.log(JSON.parse(xhr.response))
     }
     xhr.send();
 }
