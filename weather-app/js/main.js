@@ -7,21 +7,7 @@ var weatherCond = document.querySelector('.description');
 var unitVal = document.getElementById('convert');
 var tempVal;
 
-var geo_options = {
-    enableHighAccuracy: true,
-    maximumAge: 4000,
-    timeout: 4000
-};
-
-
 window.onload = getGeoLocation;
-document.getElementById('convert').addEventListener('click', function () {
-    var text = this.getAttribute('data-degree');
-    celToFaranheit(tempVal, text)
-})
-
-
-// function declarations
 function geo_success(position) {
     var url = `https://fcc-weather-api.glitch.me/api/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
 
@@ -42,6 +28,12 @@ function geo_error() {
     alert("Sorry, no position available.");
 }
 
+var geo_options = {
+    enableHighAccuracy: true,
+    maximumAge: 4000,
+    timeout: 4000
+};
+
 
 function getGeoLocation() {
     if ('geolocation' in navigator) {
@@ -53,7 +45,10 @@ function getGeoLocation() {
     }
 }
 
-
+document.getElementById('convert').addEventListener('click', function () {
+    var text = this.getAttribute('data-degree');
+    celToFaranheit(tempVal, text)
+})
 
 function celToFaranheit(temp, degree) {
     if (degree == 'C') {
