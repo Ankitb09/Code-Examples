@@ -27,8 +27,13 @@ function geo_success(position) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
+
+    xhr.onprogress = function () {
+
+    }
     xhr.onload = function (success) {
         var resp = JSON.parse(xhr.response);
+        document.getElementsByTagName('body')[0].classList.remove('loading');
         cityElem.innerHTML = resp.name;
         countryElem.innerHTML = resp.sys.country;
         tempVal = resp.main.temp;

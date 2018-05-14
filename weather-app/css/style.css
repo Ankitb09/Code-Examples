@@ -14,3 +14,7 @@ td{
   text-align:center;
   background-color: blue;
 }
+.loading{
+  opacity: 0.1;
+  pointer-events: none;
+}
