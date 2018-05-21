@@ -1,20 +1,8 @@
 body,html{
   height: 100%;
 }
+.bg{background: #efefef}
 
-.bg{background: blanchedalmond}
+.form-control.custom-search{width: 40%;display: inline-block;transition: width ease 0.3s;vertical-align: top}
 
-table, td {
-  border: 5px solid black;
-}
-
-td{
-  width:100px;
-  height:100px;
-  text-align:center;
-  background-color: blue;
-}
-.loading{
-  opacity: 0.1;
-  pointer-events: none;
-}
+.form-control.custom-search:focus{width: 70%}

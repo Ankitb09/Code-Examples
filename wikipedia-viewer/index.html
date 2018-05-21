@@ -8,23 +8,25 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
-    
+
     <title>Quote Generator</title>
 </head>
 
 <body class="bg">
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <h3>Weather App</h3>
-            <h4 class="city"><span></span>, <small></small></h4>
-            <p><span class="currTemp"></span> <a href="javascript:void(0)" data-degree="C" id="convert">&deg;C</a></p>
-            <p class="description"></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="text-center mt-5"><a href="#">click here for a random article</a></h4>
+                <form class="mt-5 text-center">
+                    <div class="form-group">
+                        <input type="text" value="" class="form-control custom-search" placeholder="search Wiki" />
+                        <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
