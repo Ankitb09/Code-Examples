@@ -3,10 +3,17 @@ var submitBtn = document.getElementById('submitBtn');
 
 function setup(){
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + inputElem.value + "&prop=info&inprop=url&utf8=&format=json",);
-    xhr.setRequestHeader( 'Api-User-Agent', 'Example/1.0' );
+    xhr.open('GET', "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=" + inputElem.value + "&limit=10",);
+    //xhr.setRequestHeader( 'Api-User-Agent', '' );
     xhr.send();
     xhr.onload = function(){
-        console.log(xhr.responseText)
+        if (xhr.status === 200) {
+           var wikitext = JSON.parse(xhr.responseText);
+            console.log(wikitext)
+            //showScreen(wikitext);  
+          }
+          else {
+            console.log('Request failed.  Returned status of ' + xhr.status);
+          }
     }
 }
