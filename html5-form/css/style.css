@@ -1,0 +1,20 @@
+body,html{
+  height: 100%;
+}
+
+.bg{background: blanchedalmond}
+
+table, td {
+  border: 5px solid black;
+}
+
+td{
+  width:100px;
+  height:100px;
+  text-align:center;
+  background-color: blue;
+}
+.loading{
+  opacity: 0.1;
+  pointer-events: none;
+}
