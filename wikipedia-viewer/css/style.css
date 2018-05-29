@@ -1,8 +1,11 @@
 body,html{
   height: 100%;
 }
+ul{list-style: none;}
+
+
 .bg{background: #efefef}
 
 .form-control.custom-search{width: 40%;display: inline-block;transition: width ease 0.3s;vertical-align: top}
-
 .form-control.custom-search:focus{width: 70%}
+
